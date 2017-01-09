@@ -1,0 +1,11 @@
+version: '2'
+services:
+  es:
+    build: .
+    image: es_ik:latest
+    environment:
+      - http.host=0.0.0.0
+      - transport.host=127.0.0.1
+    ports:
+      - "9200:9200"
+      - "9300:9300"
